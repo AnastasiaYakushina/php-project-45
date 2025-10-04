@@ -6,6 +6,9 @@
     "description": "brain games",
     "license": "MIT",
     "autoload": {
+        "files": [
+            "src/Cli.php"
+        ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         }
@@ -15,5 +18,7 @@
             "name": "AnastasiaYakushina"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.6"
+    }
 }
