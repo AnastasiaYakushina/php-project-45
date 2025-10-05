@@ -20,19 +20,14 @@ function generateTask(string $gameName): array
     switch ($gameName) {
         case 'even':
             return generateEvenTask(MIN_NUMBER, MAX_NUMBER);
-            break;
         case 'calc':
             return generateCalcTask(MIN_NUMBER, MAX_NUMBER);
-            break;
         case 'gcd':
             return generateGcdTask(MIN_NUMBER, MAX_NUMBER);
-            break;
         case 'progression':
             return generateProgressionTask(MIN_NUMBER, MAX_NUMBER);
-            break;
         case 'prime':
             return generatePrimeTask(MIN_NUMBER, MAX_NUMBER);
-            break;
     }
 }
 

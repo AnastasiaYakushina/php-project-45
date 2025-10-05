@@ -9,13 +9,10 @@ function calc(int $a, int $b, string $operator): int
     switch ($operator) {
         case '+':
             return $a + $b;
-            break;
         case '-':
             return $a - $b;
-            break;
         case '*':
             return $a * $b;
-            break;
     }
 }
 
