@@ -15,7 +15,7 @@ const ROUNDS_COUNT = 3;
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-function generateTask(string $gameName): array
+function generateTask(string $gameName): ?array
 {
     switch ($gameName) {
         case 'even':
