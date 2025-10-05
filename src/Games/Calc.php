@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Calc;
 
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\startGame;
 
 function calc($a, $b, $operator)

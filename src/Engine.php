@@ -7,6 +7,7 @@ use function cli\prompt;
 use function BrainGames\Cli\greet;
 use function BrainGames\Games\Even\generateEvenTask;
 use function BrainGames\Games\Calc\generateCalcTask;
+use function BrainGames\Games\Gcd\generateGcdTask;
 
 const ROUNDS_COUNT = 3;
 const MIN_NUMBER = 1;
@@ -21,6 +22,8 @@ function startGame($gameName, $question)
             [$task, $correctAnswer] = generateEvenTask(MIN_NUMBER, MAX_NUMBER);
         } elseif ($gameName === 'calc') {
             [$task, $correctAnswer] = generateCalcTask(MIN_NUMBER, MAX_NUMBER);
+        } elseif ($gameName === 'gcd') {
+            [$task, $correctAnswer] = generateGcdTask(MIN_NUMBER, MAX_NUMBER);
         }
         line("Question: {$task}");
         $userAnswer = prompt('Your answer');
