@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\startGame;
 
-function generateSequence($minNumber, $maxNumber)
+function generateSequence(int $minNumber, int $maxNumber): array
 {
     $step = rand(1, 10);
     $length = rand(5, 10);
@@ -17,7 +17,7 @@ function generateSequence($minNumber, $maxNumber)
     return $sequence;
 }
 
-function generateProgressionTask($minNumber, $maxNumber)
+function generateProgressionTask(int $minNumber, int $maxNumber): array
 {
     $sequence = generateSequence($minNumber, $maxNumber);
     $randomElementIndex = array_rand($sequence);
@@ -27,7 +27,7 @@ function generateProgressionTask($minNumber, $maxNumber)
     return [$task, strval($answer)];
 }
 
-function playProgression()
+function playProgression(): void
 {
     $question = 'What number is missing in the progression?';
     startGame('progression', $question);

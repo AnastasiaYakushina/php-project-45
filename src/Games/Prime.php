@@ -4,7 +4,7 @@ namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\startGame;
 
-function isPrime($number)
+function isPrime(int $number): string
 {
     if ($number <= 1) {
         return 'no';
@@ -17,14 +17,14 @@ function isPrime($number)
     return 'yes';
 }
 
-function generatePrimeTask($minNumber, $maxNumber)
+function generatePrimeTask(int $minNumber, int $maxNumber): array
 {
     $task = rand($minNumber, $maxNumber);
     $answer = isPrime($task);
     return [$task, $answer];
 }
 
-function playPrime()
+function playPrime(): void
 {
     $question = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     startGame('prime', $question);

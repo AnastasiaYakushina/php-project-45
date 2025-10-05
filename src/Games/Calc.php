@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\startGame;
 
-function calc($a, $b, $operator)
+function calc(int $a, int $b, string $operator): int
 {
     switch ($operator) {
         case '+':
@@ -19,7 +19,7 @@ function calc($a, $b, $operator)
     }
 }
 
-function generateCalcTask($minNumber, $maxNumber)
+function generateCalcTask(int $minNumber, int $maxNumber): array
 {
     $operators = ['+', '-', '*'];
     $a = rand($minNumber, $maxNumber);
@@ -30,7 +30,7 @@ function generateCalcTask($minNumber, $maxNumber)
     return [$task, strval($answer)];
 }
 
-function playCalc()
+function playCalc(): void
 {
     $question = 'What is the result of the expression?';
     startGame('calc', $question);
