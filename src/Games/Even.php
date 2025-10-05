@@ -18,6 +18,6 @@ function generateEvenTask($minNumber, $maxNumber)
 
 function playEven()
 {
-    $question = 'Welcome to the Brain Game!';
+    $question = 'Answer "yes" if the number is even, otherwise answer "no".';
     startGame('even', $question);
 }
