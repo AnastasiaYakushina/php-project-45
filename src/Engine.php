@@ -13,7 +13,7 @@ function startGame(string $question, callable $generateTask): void
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($question);
-    for ($round = 1; $round <= ROUNDS_COUNT; $round += 1) {
+    for ($round = 1; $round <= ROUNDS_COUNT; $round++) {
         [$task, $correctAnswer] = $generateTask();
         line("Question: {$task}");
         $userAnswer = prompt('Your answer');

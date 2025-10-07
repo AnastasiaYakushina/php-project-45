@@ -15,6 +15,7 @@ const MAX_STEP_SIZE = 10;
 function playProgression(): void
 {
     $question = 'What number is missing in the progression?';
+
     startGame($question, function (): array {
         $sequence = generateSequence();
         $randomElementIndex = array_rand($sequence);
@@ -27,11 +28,11 @@ function playProgression(): void
 
 function generateSequence(): array
 {
-    $step = rand(MIN_STEP_SIZE, MAX_STEP_SIZE);
-    $length = rand(MIN_SEQUENCE_LENGTH, MAX_SEQUENCE_LENGTH);
-    $start = rand(MIN_NUMBER, MAX_NUMBER);
+    $step = random_int(MIN_STEP_SIZE, MAX_STEP_SIZE);
+    $length = random_int(MIN_SEQUENCE_LENGTH, MAX_SEQUENCE_LENGTH);
+    $start = random_int(MIN_NUMBER, MAX_NUMBER);
     $sequence = [];
-    for ($i = 0; $i < $length; $i += 1) {
+    for ($i = 0; $i < $length; $i++) {
         $currentElement = $start + $i * $step;
         $sequence[] = $currentElement;
     }

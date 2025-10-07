@@ -10,8 +10,9 @@ const MAX_NUMBER = 100;
 function playEven(): void
 {
     $question = 'Answer "yes" if the number is even, otherwise answer "no".';
+
     startGame($question, function (): array {
-        $task = rand(MIN_NUMBER, MAX_NUMBER);
+        $task = random_int(MIN_NUMBER, MAX_NUMBER);
         $answer = isEven($task) ? 'yes' : 'no';
         return [$task, $answer];
     });

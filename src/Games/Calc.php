@@ -10,10 +10,11 @@ const MAX_NUMBER = 100;
 function playCalc(): void
 {
     $question = 'What is the result of the expression?';
+
     startGame($question, function (): array {
         $operators = ['+', '-', '*'];
-        $a = rand(MIN_NUMBER, MAX_NUMBER);
-        $b = rand(MIN_NUMBER, MAX_NUMBER);
+        $a = random_int(MIN_NUMBER, MAX_NUMBER);
+        $b = random_int(MIN_NUMBER, MAX_NUMBER);
         $operator = $operators[array_rand($operators)];
         $task = "{$a} {$operator} {$b}";
         $answer = runCalc($a, $b, $operator);
@@ -31,6 +32,6 @@ function runCalc(int $a, int $b, string $operator): int
         case '*':
             return $a * $b;
         default:
-            exit(1);
+            throw new Exception("Неподдерживаемый оператор: {$operator}. ");
     }
 }

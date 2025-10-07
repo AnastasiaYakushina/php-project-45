@@ -10,9 +10,10 @@ const MAX_NUMBER = 100;
 function playGcd(): void
 {
     $question = 'Find the greatest common divisor of given numbers.';
+
     startGame($question, function (): array {
-        $a = rand(MIN_NUMBER, MAX_NUMBER);
-        $b = rand(MIN_NUMBER, MAX_NUMBER);
+        $a = random_int(MIN_NUMBER, MAX_NUMBER);
+        $b = random_int(MIN_NUMBER, MAX_NUMBER);
         $task = "{$a} {$b}";
         $answer = getGcd($a, $b);
         return [$task, strval($answer)];
