@@ -32,6 +32,6 @@ function runCalc(int $a, int $b, string $operator): int
         case '*':
             return $a * $b;
         default:
-            throw new Exception("Неподдерживаемый оператор: {$operator}. ");
+            exit(1);
     }
 }
